@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "outer_folds": 5,
+  "metric_values_recomputed": 120,
+  "diagnostic_groups_checked": 20,
+  "user_comparisons_checked": 10,
+  "rmse_decompositions_checked": 10,
+  "method": "Full refit with selected parameters; independent lexsort, precision and nDCG; fold complement and split hash checks",
+  "tolerance": 1e-12
+}

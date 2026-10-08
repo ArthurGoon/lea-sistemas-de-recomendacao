@@ -1,0 +1,26 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{lmodern,microtype,textcomp}
+\usepackage{amsmath,amssymb,siunitx}
+\usepackage[a4paper,top=2.2cm,bottom=2.2cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{parskip,titlesec,enumitem,booktabs,array,graphicx,caption,float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\graphicspath{{../}{../figuras/}{figuras/}}
+\linespread{1.02}
+\setlength{\parskip}{0.48em}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.8em}{0.45em}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.3em}
+\captionsetup{font=small,labelfont=bf,labelsep=colon,justification=justified,singlelinecheck=false,skip=6pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\renewcommand{\arraystretch}{1.15}
+\setlist[itemize]{topsep=0.2em,itemsep=0.2em,parsep=0pt,leftmargin=1.4em}
+\sisetup{output-decimal-marker={,},group-separator={.},group-minimum-digits=4,group-digits=integer}
+\hypersetup{pdftitle={Sistemas de recomendação de filmes},pdfauthor={Arthur Gon},pdfsubject={Laboratório de Estatística Aplicada 2026/2}}
+\newcommand{\Pten}{\mathrm{P}@10}
+\newcommand{\DCG}{\mathrm{DCG}@10}

@@ -1,0 +1,41 @@
+{
+  "interpretation": "Descriptive paired differences; overlapping training sets; no iid t-test",
+  "comparisons": [
+    {
+      "metric": "rmse",
+      "A": "SVD",
+      "B": "KNN por nota",
+      "mean_difference": -0.03127368250737739,
+      "min_difference": -0.03309027223810668,
+      "max_difference": -0.02938605738664235,
+      "wins": 5
+    },
+    {
+      "metric": "precision10",
+      "A": "SVD",
+      "B": "KNN por nota",
+      "mean_difference": 0.07454872655340632,
+      "min_difference": 0.05651685393258437,
+      "max_difference": 0.11600877192982477,
+      "wins": 5
+    },
+    {
+      "metric": "precision10",
+      "A": "KNN por soma",
+      "B": "SVD",
+      "mean_difference": 0.12614210030037903,
+      "min_difference": 0.10011389521640057,
+      "max_difference": 0.1603070175438593,
+      "wins": 5
+    },
+    {
+      "metric": "precision10",
+      "A": "KNN por soma",
+      "B": "Mais populares",
+      "mean_difference": 0.04458501802130991,
+      "min_difference": 0.037267080745341435,
+      "max_difference": 0.06447368421052646,
+      "wins": 5
+    }
+  ]
+}

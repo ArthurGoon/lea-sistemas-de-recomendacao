@@ -1,0 +1,67 @@
+[
+  {
+    "fold": 1,
+    "n_train": 80000,
+    "n_test": 20000,
+    "n_inner_fit": 64000,
+    "n_inner_val": 16000,
+    "test_users": 459,
+    "ranking_users": 456,
+    "unseen_items": 32,
+    "random_precision": 0.015779636788078633,
+    "inner_fit_sha256": "777235c360df1b12d0b9a37270e84835f3a051b6db2630c77a8009c6d359c22a",
+    "inner_val_sha256": "bd03cd7643ceb0bed2ed388644c7aee5bc96ec04420885bd24133a9854012ecd"
+  },
+  {
+    "fold": 2,
+    "n_train": 80000,
+    "n_test": 20000,
+    "n_inner_fit": 64000,
+    "n_inner_val": 16000,
+    "test_users": 653,
+    "ranking_users": 644,
+    "unseen_items": 34,
+    "random_precision": 0.011328044336023338,
+    "inner_fit_sha256": "4a9084ca31b9a61545346b1650165aa2407c5d3af32af52c66cffd4c32da349b",
+    "inner_val_sha256": "a32fed9a3b8b28c8e4db62673d4df466f5694623937a7d03f832d1be5761b1ea"
+  },
+  {
+    "fold": 3,
+    "n_train": 80000,
+    "n_test": 20000,
+    "n_inner_fit": 64000,
+    "n_inner_val": 16000,
+    "test_users": 869,
+    "ranking_users": 849,
+    "unseen_items": 32,
+    "random_precision": 0.008443413454414328,
+    "inner_fit_sha256": "97d34770d75dc470e266ea17b66427209eca8984cafa4312c8ee6b4e205232af",
+    "inner_val_sha256": "6c20079881598dfcde3d5d9202bafded89764257d29617e22fa648aec7e0c4a2"
+  },
+  {
+    "fold": 4,
+    "n_train": 80000,
+    "n_test": 20000,
+    "n_inner_fit": 64000,
+    "n_inner_val": 16000,
+    "test_users": 923,
+    "ranking_users": 890,
+    "unseen_items": 22,
+    "random_precision": 0.007947330767704689,
+    "inner_fit_sha256": "e30d31398d2d16afed05d61cb46f70c4046d0a16e6356085bfe6f4aa6b4f0f73",
+    "inner_val_sha256": "dfb42ac22b5d5a715c7a1f02a675b31d50504500175c4fa10fe6b5d4e755858b"
+  },
+  {
+    "fold": 5,
+    "n_train": 80000,
+    "n_test": 20000,
+    "n_inner_fit": 64000,
+    "n_inner_val": 16000,
+    "test_users": 927,
+    "ranking_users": 878,
+    "unseen_items": 32,
+    "random_precision": 0.008044156302443645,
+    "inner_fit_sha256": "3dee921a0597b61d0cac064972394b8fe750548ff0e38c49298b51a715431779",
+    "inner_val_sha256": "690c0770f77048f8f71b8b9a48597863d646a4ad0a016de086c0b807020e183d"
+  }
+]

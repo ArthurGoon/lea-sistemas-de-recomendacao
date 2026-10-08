@@ -1,0 +1,68 @@
+\section{Como a comparação foi feita}
+\subsection{Validação e métricas}
+São usados os cinco particionamentos oficiais (u1 a u5), com 80.000 notas de
+treino e 20.000 de teste. Cada treino é dividido aleatoriamente em 64.000
+notas para ajuste e 16.000 para escolha dos hiperparâmetros, com semente
+$42+f$ na partição $f$. A configuração escolhida é reajustada nas 80.000
+notas. O teste externo não orienta a seleção; os cinco testes são disjuntos
+e cobrem as 100.000 avaliações.
+
+O \textbf{RMSE} mede o erro sobre todas as notas de teste, com previsões
+limitadas a $[1,5]$. A \textbf{Precisão@10} mede a proporção de acertos na lista:
+\[
+\mathrm{RMSE}=\sqrt{\frac{1}{N}\sum(r_{ui}-\hat r_{ui})^2},\qquad
+\Pten(u)=\frac{|L_u\cap T_u^+|}{10}.
+\]
+$L_u$ contém os dez recomendados e $T_u^+$, os filmes com nota de teste
+$\geq4$. São candidatos todos os filmes não avaliados pelo usuário no treino,
+sem amostrar negativos. A precisão é a média entre usuários com ao menos um
+relevante no teste (456 a 890 por partição). Empates são resolvidos pelo id
+do filme. MAE e nDCG@10 complementam a comparação; o nDCG usa ganho binário
+para notas 4 e 5, desconto pela posição e normalização pela ordem ideal.
+
+\subsection{Modelos e escolha das configurações}
+O \textbf{SVD} (FunkSVD) estima $\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$, com
+média do treino $\mu$, vieses $b$ e fatores $p,q$ ajustados por SGD regularizado. O \textbf{KNN} usa
+cosseno sobre notas centradas na média de cada usuário. Médias e similaridades
+usam apenas o treino. No cosseno, ausências viram zero após a centralização;
+as normas são das linhas completas. Entre os $k$ vizinhos mais similares,
+somente os que avaliaram o filme contribuem:
+\[
+\hat r_{ui}=\mu_u+
+\frac{\sum_{v\in N_k(u,i)}s_{uv}(r_{vi}-\mu_v)}
+{\sum_{v\in N_k(u,i)}s_{uv}}.
+\]
+São mantidas similaridades positivas, com peso opcional
+$\min(n_{uv},h)/h$ pelo número de filmes em comum; $h=0$ desativa esse peso.
+Sem suporte, usa-se $\mu_u$. A comparação principal ordena pelas notas
+previstas. A variante \textbf{KNN por soma} ordena apenas pelo numerador,
+retendo a contribuição acumulada dos mesmos vizinhos; o erro de nota não muda.
+SVD e KNN por nota são ordenados antes do recorte em $[1,5]$.
+
+\begin{table}[H]
+\centering\small
+\caption{Busca interna e escolhas. SVD e KNN minimizam RMSE; o suporte da
+nota média maximiza $P$@10. $d$: fatores; $\eta$: taxa de aprendizagem;
+$\lambda$: regularização.}
+\begin{tabular}{@{}p{2.5cm}p{7.5cm}p{4.8cm}@{}}
+\toprule
+Modelo & Configurações testadas & Selecionado\\
+\midrule
+KNN & $k$: 10, 20, 40, 80, 160, 300; $h$: 0 ou 50 &
+$k=300$; $h=50$ em u1, u4, u5 e 0 em u2, u3\\
+\addlinespace
+SVD & $d$: 20, 50, 100; $\eta$: 0,005 ou 0,01; $\lambda$: 0,05 ou 0,10 &
+$d=50$ em u1 e 100 nos demais; $\eta=0{,}01$, $\lambda=0{,}10$\\
+\addlinespace
+Nota média & Suporte: 1, 5, 10, 20, 40, 80, 150 & 150 nas cinco partições\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As referências ordenam por sorteio, quantidade de avaliações ou nota média
+com suporte mínimo. Para prever notas, popularidade usa a média do filme
+com dez notas equivalentes à média global; nota média usa a média global
+nos itens excluídos. A média global prevê uma constante. O sorteio usa notas
+contínuas uniformes em $[1,5]$.
+O SVD usa 40 épocas seriais e semente 42. Filmes sem treino têm fatores e
+viés nulos no SVD; permanecem os termos estimáveis.

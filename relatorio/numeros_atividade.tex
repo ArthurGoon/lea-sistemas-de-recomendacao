@@ -1,0 +1,117 @@
+\newcommand{\svdRMSE}{\num{0.9098}}
+\newcommand{\svdMAE}{\num{0.7182}}
+\newcommand{\svdP}{\num{0.0753}}
+\newcommand{\svdN}{\num{0.0786}}
+\newcommand{\svdRMSEsd}{\num{0.0069}}
+\newcommand{\svdPsd}{\num{0.0241}}
+\newcommand{\knnRMSE}{\num{0.9411}}
+\newcommand{\knnMAE}{\num{0.7346}}
+\newcommand{\knnP}{\num{0.0007}}
+\newcommand{\knnN}{\num{0.0007}}
+\newcommand{\knnRMSEsd}{\num{0.0063}}
+\newcommand{\knnPsd}{\num{0.0006}}
+\newcommand{\somaRMSE}{\num{0.9411}}
+\newcommand{\somaMAE}{\num{0.7346}}
+\newcommand{\somaP}{\num{0.2014}}
+\newcommand{\somaN}{\num{0.2629}}
+\newcommand{\somaRMSEsd}{\num{0.0063}}
+\newcommand{\somaPsd}{\num{0.0466}}
+\newcommand{\popRMSE}{\num{1.0256}}
+\newcommand{\popMAE}{\num{0.8203}}
+\newcommand{\popP}{\num{0.1568}}
+\newcommand{\popN}{\num{0.1982}}
+\newcommand{\popRMSEsd}{\num{0.0113}}
+\newcommand{\popPsd}{\num{0.0372}}
+\newcommand{\topRMSE}{\num{1.0937}}
+\newcommand{\topMAE}{\num{0.8933}}
+\newcommand{\topP}{\num{0.1179}}
+\newcommand{\topN}{\num{0.1273}}
+\newcommand{\topRMSEsd}{\num{0.0155}}
+\newcommand{\topPsd}{\num{0.0286}}
+\newcommand{\randomRMSE}{\num{1.6999}}
+\newcommand{\randomMAE}{\num{1.3902}}
+\newcommand{\randomP}{\num{0.0105}}
+\newcommand{\randomN}{\num{0.0113}}
+\newcommand{\randomRMSEsd}{\num{0.0186}}
+\newcommand{\randomPsd}{\num{0.0027}}
+\newcommand{\globalRMSE}{\num{1.1256}}
+\newcommand{\globalMAE}{\num{0.9447}}
+\newcommand{\globalRMSEsd}{\num{0.0174}}
+\newcommand{\acasoP}{\num{0.0103}}
+\newcommand{\ganhoRmse}{\num{3.3}}
+\newcommand{\ganhoPop}{\num{28.4}}
+\newcommand{\vizNota}{\num{1.6}}
+\newcommand{\avalNota}{\num{4.8}}
+\newcommand{\vizSoma}{\num{117.0}}
+\newcommand{\avalSoma}{\num{274.3}}
+\newcommand{\vence}{\num{38.7}}
+\newcommand{\empata}{\num{39.1}}
+\newcommand{\perde}{\num{22.2}}
+\newcommand{\acertosSvd}{\num{0.75}}
+\newcommand{\acertosSoma}{\num{2.01}}
+\newcommand{\acertosPop}{\num{1.57}}
+\newcommand{\difSomaSvd}{\num{1.26}}
+\newcommand{\difSomaPop}{\num{0.45}}
+\newcommand{\nPoucoSuporte}{\num{1636}}
+\newcommand{\nMuitoSuporte}{\num{55907}}
+\newcommand{\tblAtivPopulares}{
+Star Wars (1977) & 583 & \num{4.358} \\
+Contact (1997) & 509 & \num{3.804} \\
+Fargo (1996) & 508 & \num{4.156} \\
+}
+\newcommand{\tblAtivBemAvaliados}{
+Close Shave, A (1995) & 112 & \num{4.491} \\
+Schindler's List (1993) & 298 & \num{4.466} \\
+Wrong Trousers, The (1993) & 118 & \num{4.466} \\
+}
+\newcommand{\tblAtivSuporte}{
+1 a 2 & 209 & \num{2.371} & \num{1.191} \\
+3 a 5 & 175 & \num{2.748} & \num{0.807} \\
+6 a 20 & 371 & \num{2.879} & \num{0.605} \\
+21 a 50 & 334 & \num{3.103} & \num{0.539} \\
+51 a 100 & 259 & \num{3.374} & \num{0.465} \\
+Mais de 100 & 334 & \num{3.650} & \num{0.414} \\
+}
+\newcommand{\tblAtivProtocolo}{
+u1 & 459 & 456 & 32 & \num{0.0158} \\
+u2 & 653 & 644 & 34 & \num{0.0113} \\
+u3 & 869 & 849 & 32 & \num{0.0084} \\
+u4 & 923 & 890 & 22 & \num{0.0079} \\
+u5 & 927 & 878 & 32 & \num{0.0080} \\
+}
+\newcommand{\tblAtivEscolhas}{
+u1 & 300 & 50 & 50 & \num{0.010} & \num{0.10} & 150 \\
+u2 & 300 & 0 & 100 & \num{0.010} & \num{0.10} & 150 \\
+u3 & 300 & 0 & 100 & \num{0.010} & \num{0.10} & 150 \\
+u4 & 300 & 50 & 100 & \num{0.010} & \num{0.10} & 150 \\
+u5 & 300 & 50 & 100 & \num{0.010} & \num{0.10} & 150 \\
+}
+\newcommand{\tblAtivResultados}{
+Aleatório & \num{1.6999} $\pm$ \num{0.0186} & \num{1.3902} & \num{0.0105} $\pm$ \num{0.0027} & \num{0.0113} \\
+Mais populares & \num{1.0256} $\pm$ \num{0.0113} & \num{0.8203} & \num{0.1568} $\pm$ \num{0.0372} & \num{0.1982} \\
+Melhores avaliados & \num{1.0937} $\pm$ \num{0.0155} & \num{0.8933} & \num{0.1179} $\pm$ \num{0.0286} & \num{0.1273} \\
+KNN por nota & \num{0.9411} $\pm$ \num{0.0063} & \num{0.7346} & \num{0.0007} $\pm$ \num{0.0006} & \num{0.0007} \\
+KNN por soma & \num{0.9411} $\pm$ \num{0.0063} & \num{0.7346} & \num{0.2014} $\pm$ \num{0.0466} & \num{0.2629} \\
+SVD & \num{0.9098} $\pm$ \num{0.0069} & \num{0.7182} & \num{0.0753} $\pm$ \num{0.0241} & \num{0.0786} \\
+Média global & \num{1.1256} $\pm$ \num{0.0174} & \num{0.9447} & -- & -- \\
+}
+\newcommand{\tblAtivFolds}{
+u1 & \num{0.9216} & \num{0.9510} & \num{0.1178} & \num{0.0018} & \num{0.2781} & \num{0.2136} \\
+u2 & \num{0.9105} & \num{0.9435} & \num{0.0683} & \num{0.0005} & \num{0.2134} & \num{0.1761} \\
+u3 & \num{0.9061} & \num{0.9392} & \num{0.0662} & \num{0.0002} & \num{0.1730} & \num{0.1346} \\
+u4 & \num{0.9056} & \num{0.9361} & \num{0.0572} & \num{0.0007} & \num{0.1756} & \num{0.1328} \\
+u5 & \num{0.9054} & \num{0.9358} & \num{0.0670} & \num{0.0006} & \num{0.1671} & \num{0.1271} \\
+}
+\newcommand{\tblAtivDiferencas}{
+SVD / KNN por nota & RMSE & \num{-0.0313} & 5/5 \\
+SVD / KNN por nota & $P$@10 & \num{0.0745} & 5/5 \\
+KNN por soma / SVD & $P$@10 & \num{0.1261} & 5/5 \\
+KNN por soma / Mais populares & $P$@10 & \num{0.0446} & 5/5 \\
+}
+\newcommand{\tblAtivSuporteValidacao}{
+1 & 1613 & \num{1.0227} & \num{0.0006} \\
+5 & 1229 & \num{1.0232} & \num{0.0462} \\
+20 & 799 & \num{1.0366} & \num{0.0463} \\
+80 & 260 & \num{1.0720} & \num{0.0621} \\
+150 & 83 & \num{1.0926} & \num{0.0837} \\
+}

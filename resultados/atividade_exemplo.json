@@ -1,0 +1,150 @@
+[
+  {
+    "model": "Mais populares",
+    "user": 13,
+    "train_count": 585,
+    "recommendations": [
+      {
+        "item": 151,
+        "title": "Willy Wonka and the Chocolate Factory (1971)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 15,
+        "title": "Mr. Holland's Opus (1995)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 257,
+        "title": "Men in Black (1997)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 176,
+        "title": "Aliens (1986)",
+        "test_rating": 3.0,
+        "hit": false
+      },
+      {
+        "item": 742,
+        "title": "Ransom (1996)",
+        "test_rating": null,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "model": "KNN por nota",
+    "user": 13,
+    "train_count": 585,
+    "recommendations": [
+      {
+        "item": 1554,
+        "title": "Safe Passage (1994)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 1368,
+        "title": "Mina Tannenbaum (1994)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 1463,
+        "title": "Boys, Les (1997)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 1536,
+        "title": "Aiqing wansui (1994)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 1367,
+        "title": "Faust (1994)",
+        "test_rating": null,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "model": "KNN por soma",
+    "user": 13,
+    "train_count": 585,
+    "recommendations": [
+      {
+        "item": 134,
+        "title": "Citizen Kane (1941)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 135,
+        "title": "2001: A Space Odyssey (1968)",
+        "test_rating": 5.0,
+        "hit": true
+      },
+      {
+        "item": 176,
+        "title": "Aliens (1986)",
+        "test_rating": 3.0,
+        "hit": false
+      },
+      {
+        "item": 496,
+        "title": "It's a Wonderful Life (1946)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 479,
+        "title": "Vertigo (1958)",
+        "test_rating": null,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "model": "SVD",
+    "user": 13,
+    "train_count": 585,
+    "recommendations": [
+      {
+        "item": 1449,
+        "title": "Pather Panchali (1955)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 408,
+        "title": "Close Shave, A (1995)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 169,
+        "title": "Wrong Trousers, The (1993)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 1512,
+        "title": "World of Apu, The (Apur Sansar) (1959)",
+        "test_rating": null,
+        "hit": false
+      },
+      {
+        "item": 513,
+        "title": "Third Man, The (1949)",
+        "test_rating": null,
+        "hit": false
+      }
+    ]
+  }
+]

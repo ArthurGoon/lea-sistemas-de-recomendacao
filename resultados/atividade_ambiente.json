@@ -1,0 +1,8 @@
+{
+  "python": "3.12.10",
+  "numpy": "2.4.4",
+  "pandas": "2.3.3",
+  "matplotlib": "3.10.9",
+  "seed": 42,
+  "epochs": 40
+}

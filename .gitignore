@@ -1,0 +1,48 @@
+# Artefatos de compilacao LaTeX
+relatorio/_build/
+relatorio/_build_ativ/
+relatorio/_mt/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Cache do Numba (compilacao JIT)
+__pycache__/*.nbi
+__pycache__/*.nbc
+
+# Sistemas operacionais / editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# O conjunto de dados bruto (grande; baixavel em grouplens.org)
+dados/*.zip
+dados/ml-100k/
+tmp/
+.venv/
+resultados/_execucao_final.log
+
+# Material bruto da aula (HTML baixado) e utilitarios de preparacao do ambiente
+_fonte/sisrec.html
+_fonte/*.log
+
+# Logs e auxiliares temporarios
+resultados/_pid.txt
+resultados/_log_modelagem.err.txt
+_log_pipeline_final.txt
+_verificacao.txt
